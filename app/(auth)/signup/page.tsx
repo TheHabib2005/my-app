@@ -143,22 +143,9 @@ const Signup = () => {
         }
     }
 
-    const tr = () => {
-        return <GoogleLogin
-            onSuccess={credentialResponse => {
-                console.log(credentialResponse);
-                const token = credentialResponse.credential
-                const decodedToken = jwtDecode(token!);
-                // window.location.href = "/"
-                handleGoogleLogin({ username: decodedToken.name, email: decodedToken.email, password: "googleuser" })
-            }}
-            onError={() => {
-                console.log('Login Failed');
-            }}
-        />;
-    }
 
-    console.log(tr);
+
+
 
 
     return (
@@ -175,18 +162,7 @@ const Signup = () => {
 
                     <div className="mt-6 flex flex-col items-center">
                         <h1 className="text-2xl xl:text-3xl font-bold">Sign up</h1>
-                        <GoogleLogin
-                            onSuccess={credentialResponse => {
-                                console.log(credentialResponse);
-                                const token = credentialResponse.credential
-                                const decodedToken = jwtDecode(token!);
-                                // window.location.href = "/"
-                                handleGoogleLogin({ username: decodedToken.name, email: decodedToken.email, password: "googleuser" })
-                            }}
-                            onError={() => {
-                                console.log('Login Failed');
-                            }}
-                        />;
+
                         {/* <div className="w-full flex-1 mt-5">
                             <div className="flex flex-col items-center">
                                 <button
