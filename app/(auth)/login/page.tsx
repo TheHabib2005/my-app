@@ -73,7 +73,7 @@ const SignIn = () => {
         validationSchema: signinFormValidateSchema,
         onSubmit: async (values) => {
             if (navigator.onLine) {
-                handleLogin(values);
+                // handleLogin(values);
             } else {
                 setLoading(true);
                 await delay(3000);
