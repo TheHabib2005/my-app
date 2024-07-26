@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
-import { SessionProvider } from "next-auth/react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import TranstackQueryProvider from "@/components/TranstackQueryProvider";
+import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,11 +19,18 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={inter.className + ' dark:bg-black text-white'}>
-
-                {children}
-
-
+            <body className={inter.className + ' dark:bg-black text-white container mx-auto sm:p-0 px-4'}>
+                <Toaster
+                    position="top-center"
+                    reverseOrder={false}
+                />
+                <TranstackQueryProvider>
+                    <Header />
+                    <main>
+                        {children}
+                    </main>
+                    <Footer />
+                </TranstackQueryProvider>
             </body>
         </html>
     );

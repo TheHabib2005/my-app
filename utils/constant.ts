@@ -6,22 +6,17 @@ export const smartPhoneBrandList = [
   },
   {
     id: Math.round(Math.random() * 200),
-    name: "nike",
-    isChecked: false,
-  },
-  {
-    id: Math.round(Math.random() * 200),
-    name: "puma",
-    isChecked: false,
-  },
-  {
-    id: Math.round(Math.random() * 200),
     name: "bata",
     isChecked: false,
   },
   {
     id: Math.round(Math.random() * 200),
-    name: "step foot wear",
+    name: "power",
+    isChecked: false,
+  },
+  {
+    id: Math.round(Math.random() * 200),
+    name: " Justice League",
     isChecked: false,
   },
 ];
@@ -55,25 +50,35 @@ export const productCategories = [
   },
 ];
 
-export const accountMenus = [
+export const dashboardMenus = [
   {
     id: 1,
-    title: "Profile",
-    path: "/my-account",
+    title: "Home",
+    path: "/dashboard",
   },
   {
     id: 2,
-    title: "orders",
-    path: "/my-account/orders",
+    title: "product-list",
+    path: "/dashboard/products-list",
   },
   {
     id: 3,
-    title: "wishList",
-    path: "/my-account/wishlist",
+    title: "users",
+    path: "/dashboard/users",
   },
   {
     id: 4,
-    title: "Manage Account",
-    path: "/my-account/manage-account",
+    title: "add new Product",
+    path: "/dashboard/add-new-product",
+  },
+  {
+    id: 5,
+    title: "Profile",
+    path: "/dashboard/profile",
+  },
+  {
+    id: 6,
+    title: "Loggut",
+    path: "/dashboard/Logout",
   },
 ];

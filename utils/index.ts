@@ -46,5 +46,18 @@ export function calculateDiscountedPrice<T extends number>(
 }
 
 export const updateCartdb = (data: any) => {
-  console.log("data update");
+  console.log("data update", data);
+};
+
+// let number = 1900;
+// let formattedNumber = number.toLocaleString('en-US', {
+//     style: 'currency',
+//     currency: 'USD'
+// });
+
+// console.log(formattedNumber); // Outputs: $1,900.00
+
+export const formatePrice = (price: number): string => {
+  let formattedNumber = price.toLocaleString("en-US");
+  return formattedNumber;
 };
