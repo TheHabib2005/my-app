@@ -56,19 +56,19 @@ const useAddProductForm = () => {
                 product_category: "",
                 product_image: "",
                 product_price: "",
-            } as Product,
+            },
             validationSchema: productInputSchema,
             onSubmit: async (values) => {
                 let product = { ...values, product_image: "productImageUrl" };
 
-                if (navigator.onLine) {
-                    handleAddProduct(product);
-                } else {
-                    setLoading(true);
-                    await delay(3000);
-                    setLoading(false);
-                    toast.error("please conncet to the internet");
-                }
+                // if (navigator.onLine) {
+                //     handleAddProduct();
+                // } else {
+                //     setLoading(true);
+                //     await delay(3000);
+                //     setLoading(false);
+                //     toast.error("please conncet to the internet");
+                // }
             },
         });
 
